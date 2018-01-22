@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBM-1g-9GB">
+                                <rect key="frame" x="82.5" y="206.5" width="155" height="155"/>
+                                <state key="normal" image="RecordButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h6b-nm-oPC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap To Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oR3-gH-hks">
+                                <rect key="frame" x="104.5" y="363.5" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PQ-Wg-ohb">
+                                <rect key="frame" x="82.5" y="356.5" width="155" height="155"/>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Qx-5C-DDj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oR3-gH-hks" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AYy-8K-LTF"/>
+                            <constraint firstItem="1PQ-Wg-ohb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="JdN-hD-5R9"/>
+                            <constraint firstItem="1PQ-Wg-ohb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JgU-xg-KC9"/>
+                            <constraint firstItem="IBM-1g-9GB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aQt-kw-CmO"/>
+                            <constraint firstItem="IBM-1g-9GB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rqL-0r-PUG"/>
+                            <constraint firstItem="IBM-1g-9GB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xtV-aU-n1e"/>
+                            <constraint firstItem="oR3-gH-hks" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="90" id="yly-gq-EGs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="oR3-gH-hks" id="z6k-dU-AMY"/>
+                        <outlet property="recirdButton" destination="IBM-1g-9GB" id="cmH-ZI-I71"/>
+                        <outlet property="stopRecord" destination="1PQ-Wg-ohb" id="Ec3-4E-HiB"/>
+                        <outlet property="stopRecordButton" destination="1PQ-Wg-ohb" id="cfd-hg-egq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.875" y="50.70422535211268"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RecordButton" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
+    </resources>
+</document>
